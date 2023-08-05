@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Upcoming Matches and Ticket Booking">
+    <meta name="keywords" content="upcoming matches, tickets, book tickets">
+    <meta name="author" content="Your Name">
+    <link rel="icon" href="icon.jpeg">
+    <title>Book your Tickets</title>
+    <!-- <button id="scrollToTopBtn" title="Go to top">^</button> -->
+    <!-- <link rel="stylesheet" href="gyt.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <style>
+
+        body {
+            font-family: 'Cinzel Decorative', cursive;
+            margin: 0;
+        }
+
+        nav {
+            font-size: 20px;
+            background-color: #3e2358;
+            display: flex;
+            padding: 20px;
+            flex-direction: row;
+            transition: background-color 1s;
+        }
+
+        .left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 20%;
+            color: #fff;
+        }
+        .left:hover{
+            text-decoration: underline;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav>a:hover {
+
+            text-decoration: none;
+        }
+
+        .upcom {
+            color: #fff;
+            width: 80%;
+            margin-left: 25%;
+        }
+
+        nav:hover {
+            background-color: #10141B;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .match-card {
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .match-card h3 {
+            margin: 0;
+        }
+
+        .match-card p {
+            margin: 5px 0;
+        }
+
+        .book-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .book-button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #3e2358;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .footer-container a {
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .social-media {
+            margin-top: 20px;
+        }
+
+        .social-media img {
+            width: 40px;
+            height: 40px;
+            margin: 20px;
+            border-radius: 50%;
+        }
+
+        div>a {
+            color: white;
+        }
+
+        div>a:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+        .belowname:hover {
+            color: white;
+            text-decoration: none;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    {% comment %} <ul id="matches-list">
+        <!-- Upcoming match items will be added here -->
+    </ul>
+
+    <script>
+        fetch('/api/upcoming-matches/')
+            .then(response => response.json())
+            .then(data => {
+                const matchesList = document.getElementById('matches-list');
+                data.upcoming_matches.forEach(match => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `
+                        <strong>${match.title}</strong><br>
+                        Date: ${match.date}<br>
+                        Description: ${match.description}
+                    `;
+                    matchesList.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script> {% endcomment %}
+    <!-- <header>
+        <h1>Upcoming Matches</h1>
+    </header> -->
+    <nav>
+        <a class="left" href="index.html">Home</a>
+        <h2 class="upcom" href="#">Upcoming Matches</h2>
+        <!-- <a href="#">Book Tickets</a> -->
+    </nav>
+    <section>
+        {%for match in matches%}
+        <div class="match-card">
+            <div>
+                <h3>Match {{match.id}}</h3>
+                <p>Date: {{match.ma_date}}</p>
+                <p>Location: Stadium A</p>
+            </div>
+            <div>{{match.team1}} v/s {{match.team2}}</div>
+            <a href="booktick.html"><button class="book-button">Book Tickets</button></a>
+        </div>
+        {%endfor%}
+        {% comment %} <div class="match-card">
+            <div>
+                <h3>Match 2</h3>
+                <p>Date: September 8, 2023</p>
+                <p>Location: Stadium A</p>
+            </div>
+            <div>Gryffindor Sky Scythe v/s avenclaw Eagles</div>
+            <button class="book-button">Book Tickets</button>
+        </div>
+        <div class="match-card">
+            <div>
+                <h3>Match 3</h3>
+                <p>Date: September 15, 2023</p>
+                <p>Location: Stadium A</p>
+            </div>
+            <div>Gryffindor Sky Scythe v/s Slytherin Snakes</div>
+            <button class="book-button">Book Tickets</button>
+        </div>
+        <div class="match-card">
+            <div>
+                <h3>Match 4</h3>
+                <p>Date: September 22, 2023</p>
+                <p>Location: Stadium A</p>
+            </div>
+            <div>Gryffindor Sky Scythe v/s Durmstrang Dragons</div>
+            <button class="book-button">Book Tickets</button>
+        </div>
+        <div class="match-card">
+            <div>
+                <h3>Match 5</h3>
+                <p>Date: September 27, 2023</p>
+                <p>Location: Stadium B</p>
+            </div>
+            <div>Gryffindor Sky Scythe v/s Beauxbatons Tornados</div>
+            <button class="book-button">Book Tickets</button>
+        </div> {% endcomment %}
+        <!-- Add more match cards here -->
+    </section>
+    <footer>
+
+        <div class="footer-container">
+            <a class="belowname">© GSS. All Rights Reserved</a>
+            <a href="Terms_C.html" class="Terms and Conditions" target="_blank">Terms and Conditions</a>
+            <a href="Contact.html" class="Contact" target="_blank">Contact</a>
+            <a href="PriPo.html" class="PriPo" target="_blank">Privacy Policy</a>
+            <a href="Disclaimer.html" class="Disclaimer" target="_blank">Disclaimer</a>
+        </div>
+        <div class="social-media">
+            <a href="">
+                <img src="twitter.jpeg" alt="Icon" />
+            </a>
+            <a href="">
+                <img src="instagram.jpeg" alt="Icon" />
+            </a>
+            <a href="">
+                <img src="youtube.jpeg" alt="Icon" />
+            </a>
+
+        </div>
+        <!-- <p>&copy; 2023 Your Website. All rights reserved.</p> -->
+    </footer>
+</body>
+
+</html>

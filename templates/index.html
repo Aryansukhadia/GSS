@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your website description goes here">
+  <meta name="keywords" content="keyword1, keyword2, keyword3">
+  <meta name="author" content="Your Name">
+  <link rel="icon" href="static/icon.jpeg">
+  <title>Gryffindor Sky Scythe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+  <script>
+    // JavaScript
+window.addEventListener('scroll', function() {
+  var scrollTop = window.pageYOffset;
+  var body = document.querySelector('body');
+  body.style.backgroundColor = getBackgroundColor(scrollTop);
+
+  // Add a transition time of 2 second.
+  body.style.transition = 'background-color 1s ease-in-out';
+});
+
+function getBackgroundColor(scrollTop) {
+  // var colors = ['#10141B','#242533', '#8CBCB9', '#DDA448', '#BB342F'];
+  // var colors = ['#0B666A','#5032a8','#3238a8', '#3271a8', '#32a0a8', '#0B2559'];
+  var colors = ['#0f1a2d','#1f3660','#0f1a2d','#1f3660'];
+  var index = Math.floor(scrollTop / 500) % colors.length;
+  return colors[index];
+}
+
+  </script>
+
+  <style>
+    
+
+    /* CSS for the splash screen */
+    #splashScreen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff; /* Set your desired background color */
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      {% comment %} time: 5sec; {% endcomment %}
+    }
+
+    #splashScreen img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+
+    html {
+      font-family: 'Cinzel Decorative', cursive;
+      margin: 0 px;
+    }
+
+    {% comment %} body {
+      margin: 0;
+    } {% endcomment %}
+
+    nav {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      text-align: center;
+      background-color: #3e2358;
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      transition: background-color 1s;
+      /* position: fixed; */
+    }
+
+    .nav a {
+      color: white;
+      padding: 45px;
+      text-decoration: none;
+      /* transition: background-color 1s; */
+
+    }
+
+    #heading {
+      width: 100%;
+      margin: 0px;
+      padding: 30px;
+      box-sizing: border-box;
+      color: white;
+      align-self: center;
+      transition: background-color 1s;
+
+    }
+
+    .nav:hover {
+      background-color: #10141B;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      text-decoration-color: #8c2de4;
+    }
+
+    #heading:hover {
+      background-color: #242533;
+    }
+
+    nav:nth-of-type(6):hover {
+      background-color: #242533;
+    }
+
+    p {
+      padding-top: 40px;
+      margin: 40px;
+      margin-top: 0px;
+      font-size: 20px;
+      text-align: start;
+    }
+
+    section {
+      /* background-image:url("https://images.unsplash.com/photo-1583997052301-0042b33fc598?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aGFycnklMjBwb3R0ZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60") ; */
+      background-size: contain;
+    }
+    .pht div{
+      display: flex;
+      flex-direction: row;
+    }
+    .pht img{
+      width:30%;
+      height:max-content;
+      justify-content: center;
+      align-items: center;
+      align-self: center;
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+
+    footer {
+      background-color: #3e2358;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-decoration: none;
+      margin: 10px;
+    }
+    .division{
+      color: #fff;
+
+    }
+    .footer-container a {
+      text-decoration: none;
+      margin: 10px;
+    }
+
+    .social-media {
+      margin-top: 20px;
+    }
+
+    .social-media img {
+      width: 40px;
+      height: 40px;
+      margin: 20px;
+      border-radius: 50%;
+    }
+
+    div>a {
+      color: white;
+    }
+
+    div>a:hover {
+      color: #007bff;
+      text-decoration: underline;
+    }
+
+    .belowname:hover {
+      color: white;
+      text-decoration: none;
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Splash screen -->
+  <div id="splashScreen">
+    <img src="static/QT.jpeg" alt="Logo">
+  </div>
+  <script>
+    
+    window.addEventListener("load", function() {
+      var splashScreen = document.getElementById("splashScreen");
+      splashScreen.style.display = "none"; // Hide the splash screen when the page finishes loading
+    });
+  </script>
+  
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="gyt.html" class="gyt" target="_blank">Upcoming Matches</a>
+    <a href="mp.html" class="mp" target="_blank">Matches Played</a>
+    <a href="login.html" class="login" target="_blank">Login</a>
+    <a href="team.html" class="team" target="_blank">Team</a>
+    <a href="mas.html" class="mas" target="_blank">Merchandise and Souveniers</a>
+    <!-- <button type="button">LUMOUS</button> -->
+    <h1 id="heading">Welcome to the world of GSS</h1>
+  </nav>
+  <section class="pht">
+  <div>
+    <p class="division">Welcome to Gryffindor Sky SCYTHE
+      Experience the thrilling world of Quidditch as you immerse yourself in the excitement of the famous wizarding
+      sport. Gryffindor Super King is your ultimate destination for all things Quidditch, featuring team rosters, match
+      schedules, and interactive elements that bring the magic of the game to life.
+      Explore the rich history of Gryffindor's Quidditch legacy, with detailed match data from previous epic encounters.
+      Relive the excitement, drama, and unforgettable moments that have made Gryffindor Super King a force to be
+      reckoned with.
+      Buy your tickets now and witness the fierce competition firsthand. Our ticket selling portal ensures a seamless
+      experience, allowing you to secure your spot in the stands and cheer on your favorite team.
+      For administrators, we offer powerful tools to manage the Quidditch matches. Add, create, or delete matches and
+      their associated data with ease. Stay in control as you monitor registrations and modify user information, giving
+      you the power to add, delete, or change the status of users. Our authentication system ensures secure access and
+      privacy for administrators.
+      To enhance your experience even further, we're constantly exploring opportunities for API integrations and
+      additional features. Stay tuned for updates as we continue to expand Gryffindor Super King.
+      Join us on this magical journey into the world of Quidditch and witness the triumphs and challenges that await.
+      Are you ready to embrace the spirit of Gryffindor Sky Scythes? 
+    </p>
+    <img src="https://wallpaperaccess.com/thumb/22917.jpg">
+    </div>
+    <div class="pht">
+      <img src="https://wallpaperaccess.com/full/468291.png">
+    <p class="division">Gryffindor is one of the four houses of Hogwarts School of Witchcraft and Wizardry. It is known for its traits of courage, bravery, nerve, and chivalry. The house colors are scarlet red and gold, and its mascot is the lion. The house ghost is Nearly Headless Nick. The founder of Gryffindor House is Godric Gryffindor.Some of the most famous Gryffindors include Harry Potter, Hermione Granger, Ron Weasley, Neville Longbottom, and Albus Dumbledore. Gryffindors are known for their bravery and determination, and they often play a key role in the fight against evil. The Gryffindor common room is located in the seventh floor of the castle, and it is accessed by a portrait of a Fat Lady. The common room is decorated in scarlet red and gold, and it has a large fireplace, comfortable armchairs, and a table for meals. The Gryffindor dormitory is located next to the common room, and it is divided into four dormitories, each of which can accommodate up to four students. The dormitories are decorated in the same colors as the common room, and they have four-poster beds, feather beds, and soft pillows. Gryffindors are known for their courage, bravery, and determination. They are often the ones who stand up for what is right, even when it is difficult. They are also known for their sense of humor and their loyalty to their friends. If you are brave, courageous, and determined, then Gryffindor may be the house for you.</p>
+    </div>
+    <div class="pht">
+    <p class="division">The Hogwarts Express is a steam locomotive that transports students to and from Hogwarts School of Witchcraft and Wizardry. It is a large, red engine with gold lettering, and it is named Hogwarts Castle. The train departs from Platform 9¾ at King's Cross Station in London, and it arrives at Hogsmeade Station, which is located near Hogwarts. The Hogwarts Express is a magical train, and it is able to travel through Muggle areas without being seen. It is also able to travel at high speeds, and it can reach Hogwarts in just a few hours. The train is staffed by a team of wizards and witches, and they are responsible for ensuring that the students have a safe and enjoyable journey. The Hogwarts Express is a popular tourist destination, and it is often visited by fans of the Harry Potter series. There are also several rides and attractions based on the Hogwarts Express at the Wizarding World of Harry Potter theme parks. Hogwarts Castle is written after the Hogwarts School of witchcraft and Wizardry. The train is based on the Jacobite steam train, which runs between Fort William and Mallaig in Scotland. The train's whistle is a recording of the whistle from the Jacobite steam train. The train's carriages are named after Hogwarts professors, including Professor McGonagall, Professor Flitwick, and Professor Snape.</p>
+    <img src="https://wallpaperaccess.com/thumb/123861.jpg">
+    </div>
+    <div class="pht">
+      <img src="https://wallpaperaccess.com/thumb/619241.jpg">
+    <p class="division">The photo here is of Hogwarts crest. The Hogwarts crest is the official symbol of Hogwarts School of Witchcraft and Wizardry. It is a shield with a blue background, and it features a variety of symbols representing the four houses of Hogwarts.
+
+      The top left corner of the shield features a lion, which represents Gryffindor House. The top right corner features an eagle, which represents Ravenclaw House. The bottom left corner features a badger, which represents Hufflepuff House. The bottom right corner features a serpent, which represents Slytherin House.
+      
+      In the center of the shield is a large stone with the words "Hic Draco Dormiens Nunquam Titillandus" written on it. This Latin phrase means "Never tickle a sleeping dragon."
+      
+      The Hogwarts crest is a popular symbol among fans of the Harry Potter series. It is often used on clothing, jewelry, and other merchandise. The crest is also a popular tattoo design.</p>
+    </div>
+  </section>
+    <footer>
+      <div class="footer-container">
+        <a class="belowname">© GSS. All Rights Reserved</a>
+        <a href="tac.html">Terms and Conditions</a>
+        <a href="contact.html">Contact</a>
+        <a href="pripo.html">Privacy Policy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </div>
+      <div class="social-media">
+        <a href="">
+          <img src="static/twitter.jpeg" alt="Icon" />
+        </a>
+        <a href="">
+          <img src="static/instagram.jpeg" alt="Icon" />
+        </a>
+        <a href="">
+          <img src="static/youtube.jpeg" alt="Icon" />
+        </a>
+
+      </div>
+      <!-- <p>&copy; 2023 Your Website. All rights reserved.</p> -->
+    </footer>
+</body>
+
+</html>

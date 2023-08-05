@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="icon.jpeg">
+    <title>Contact Us</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+  
+</head>
+<style>
+    body {
+        font-family: 'Cinzel Decorative', cursive;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  text-align: left;
+  background-color: #3e2358;
+  flex-direction: row;
+  justify-content: left;
+  flex-wrap: wrap;
+  transition: background-color 1s;
+  /* position: fixed; */
+}
+
+.nav a {
+  color: white;
+  padding: 25px;
+  text-decoration: none;
+  /* transition: background-color 1s; */
+
+}
+
+#heading {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0px;
+  padding: 30px;
+  box-sizing: border-box;
+  color: white;
+  align-self: center;
+  transition: background-color 1s;
+
+}
+
+.nav:hover {
+  background-color: #10141B;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: #8c2de4;
+}
+
+#heading:hover {
+  background-color: #242533;
+}
+
+    .contact-form {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    button {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #555;
+    }
+</style>
+
+<body>
+
+    <body>
+
+        <header>
+            <h1>Contact Us</h1>
+        </header>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    
+        <div class="contact-form">
+            <form method="POST" action="/contact.html">
+                {% csrf_token %}
+                <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                
+                <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email">
+    
+                <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter your subject">
+    
+                <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" class="form-control" name="message" rows="4" placeholder="Enter your message"></textarea>
+    
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+    </html>

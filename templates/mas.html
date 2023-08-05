@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Merchandise and Souvenirs Store">
+  <meta name="keywords" content="merchandise, souvenirs, shop">
+  <meta name="author" content="Your Name">
+  <link rel="icon" href="icon.jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+
+  <!-- Example for favicon -->
+  <!-- <link rel="icon" type="image/png" href="gryffindor-lion.png" /> -->
+
+  <!-- Example for navigation icon -->
+  <!-- <a class="nav-link" href="#"><img src="wand-icon.png" alt="Menu"></a> -->
+
+  <!-- Example for character images -->
+  <!-- <img src="harry-potter.jpg" alt="Harry Potter"> -->
+
+  <title>Merchandise Store</title>
+  <style>
+    /* Your CSS styles go here */
+    body {
+      font-family: 'Cinzel Decorative', cursive;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      text-align: left;
+      background-color: #3e2358;
+      flex-direction: row;
+      justify-content: left;
+      flex-wrap: wrap;
+      transition: background-color 1s;
+      /* position: fixed; */
+    }
+
+    .nav a {
+      color: white;
+      padding: 25px;
+      text-decoration: none;
+      /* transition: background-color 1s; */
+
+    }
+
+    #heading {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: 0px;
+      padding: 30px;
+      box-sizing: border-box;
+      color: white;
+      align-self: center;
+      transition: background-color 1s;
+
+    }
+
+    .nav:hover {
+      background-color: #10141B;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      text-decoration-color: #8c2de4;
+    }
+
+    #heading:hover {
+      background-color: #242533;
+    }
+    section {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .product {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      display: inline-block;
+      width: 200px;
+    }
+
+    .product img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .product h3 {
+      margin: 0;
+    }
+
+    .product p {
+      margin: 0;
+    }
+
+    footer {
+      background-color: #3e2358;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-decoration: none;
+      margin: 10px;
+    }
+
+    .footer-container a {
+      text-decoration: none;
+      margin: 10px;
+    }
+
+    .social-media {
+      margin-top: 20px;
+    }
+
+    .social-media img {
+      width: 40px;
+      height: 40px;
+      margin: 20px;
+      border-radius: 50%;
+    }
+
+    div>a {
+      color: white;
+    }
+
+    div>a:hover {
+      color: #007bff;
+      text-decoration: underline;
+    }
+
+    .belowname:hover {
+      color: white;
+      text-decoration: none;
+
+    }
+  </style>
+</head>
+<script>
+  // Function to add items to the cart
+  function addToCart(itemName, price) {
+    const cartItemsDiv = document.getElementById('cartItems');
+    const cartItemDiv = document.createElement('div');
+    cartItemDiv.classList.add('cart-item');
+    cartItemDiv.innerHTML = `<h3>${itemName}</h3><p>Price: $${price}</p>`;
+    cartItemsDiv.appendChild(cartItemDiv);
+  }
+
+</script>
+
+<body>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <h1 id="heading">Merchandise Store</h1>
+
+    <!-- <a href="#">Shop</a> -->
+    <!-- <a href="cart.html">Cart</a> -->
+  </nav>
+  <section>
+    <div class="product">
+      <a href="buy.html" class="w-2/4 px-5 py-0 mt-0 text-xl"><img src="static/p1.jpeg" alt="Product 1"></a>
+      <h3>Mug</h3>
+      <p>Price: Rs.199/- (IC:- 1)</p>
+      <!-- <button>Add to Cart</button> -->
+      {% comment %} <button>Buy Now</button> {% endcomment %}
+    </div>
+    <div class="product">
+      <a href="buy.html" class="w-2/4 px-5 py-0 mt-0 text-xl"><img src="static/p2.jpeg" alt="Product 2"></a>
+      <h3>Key Chain</h3>
+      <p>Price: Rs.129/- (IC:- 2)</p>
+      <!-- <button>Add to Cart</button> -->
+      {% comment %} <button>Buy Now</button> {% endcomment %}
+    </div>
+    <div class="product">
+      <a href="buy.html" class="w-2/4 px-5 py-0 mt-0 text-xl"><img src="static/p3.jpeg" alt="Product 3"></a>
+      <h3>Black Tshirt</h3>
+      <p>Price: Rs.320/- (IC:- 3)</p>
+      <!-- <button>Add to Cart</button> -->
+      {% comment %} <button>Buy Now</button> {% endcomment %}
+    </div>
+    <div class="product">
+      <a href="buy.html" class="w-2/4 px-5 py-0 mt-0 text-xl"><img src="static/p4.jpeg" alt="Product 4"></a>
+      <h3>Hoodie</h3>
+      <p>Price: Rs.1000/- (IC:- 4)</p>
+      <!-- <button>Add to Cart</button> -->
+      {% comment %} <button>Buy Now</button> {% endcomment %}
+    </div>
+    <div class="product">
+      <a href="buy.html" class="w-2/4 px-5 py-0 mt-0 text-xl"><img src="static/p5.jpeg" alt="Product 1"></a>
+      <h3>Gryffindor Red full sleeve Tshirt</h3>
+      <p>Price: Rs.599/- (IC:- 5)</p>
+      <!-- <button>Add to Cart</button> -->
+      {% comment %} <button>Buy Now</button> {% endcomment %}
+    </div>
+    <div class="product">
+      <a href="buy.html" class="w-2/4 px-5 py-0 mt-0 text-xl"><img src="static/p6.jpeg" alt="Product 2"></a>
+      <h3>Classic Gryffindor pullover Hoodie(Red)</h3>
+      <p>Price: Rs.1299/- (IC:- 6)</p>
+      <!-- <button>Add to Cart</button> -->
+      {% comment %} <button>Buy Now</button> {% endcomment %}
+    </div>
+    <!-- Add more products here -->
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <a class="belowname">© GSS. All Rights Reserved</a>
+      <a href="Terms_C.html">Terms and Conditions</a>
+      <a href="Contact.html">Contact</a>
+      <a href="PriPo.html">Privacy Policy</a>
+      <a href="Disclaimer.html">Disclaimer</a>
+    </div>
+    <div class="social-media">
+      <a href="">
+        <img src="twitter.jpeg" alt="Icon" />
+      </a>
+      <a href="">
+        <img src="instagram.jpeg" alt="Icon" />
+      </a>
+      <a href="">
+        <img src="youtube.jpeg" alt="Icon" />
+      </a>
+
+    </div>
+    <!-- <p>&copy; 2023 Your Website. All rights reserved.</p> -->
+  </footer>
+</body>
+
+</html>

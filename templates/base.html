@@ -1,0 +1,175 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your website description goes here">
+    <meta name="keywords" content="keyword1, keyword2, keyword3">
+    <meta name="author" content="Your Name">
+    <link rel="icon" href="static/icon.jpeg">
+    <title>  {% block title %}{% endblock title %}  Gryffindor Sky Scythe</title>
+    <button id="scrollToTopBtn" title="Go to top">^</button>
+
+<script>
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+}
+
+// Scroll to the top when the button is clicked
+document.getElementById("scrollToTopBtn").addEventListener("click", function() {
+  scrollToTop();
+});
+
+function scrollToTop() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+}
+</script>
+<script>
+    // Get all buttons on the page
+  const buttons = document.querySelectorAll('.button');
+  
+  // Add event listener to each button
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Perform an action when the button is clicked
+      console.log(`Button with ID ${button.id} was clicked!`);
+      
+      // You can add more actions here based on your requirements
+      // For example, you can update the content, change styles, or trigger animations.
+    });
+  });
+  
+  </script>
+    <style>
+        /* Your CSS styles go here */
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-decoration: none;
+            margin: 10px;
+          }
+          
+          /* Styles for the footer links */
+          .footer-container a {
+            text-decoration: none;
+            margin: 10px;
+          }
+          
+          /* Styles for the social media icons */
+          .social-media {
+            margin-top: 20px;
+          }
+          
+          .social-media img {
+            width: 40px;
+            height: 40px;
+            margin: 20px;
+          }
+    </style>
+</head>
+<body>
+    <!-- <header>
+        <h1>Your Website Header</h1>
+    </header> -->
+    <nav>
+
+        <a href="index.html" >Home</a>
+        <a href="gyt.html" class="gyt" target="_blank">Upcoming Matches</a>
+        <a href="mp.html" class="mp" target="_blank">Matches Played</a>
+        <a href="login.html" class="login" target="_blank">Login</a>
+        <a href="mas.html" class="mas" target="_blank">Merchandise and Souveniers</a>
+<!--             
+        <a href="#">Home</a>
+        <a href="#">Get your Tickets</a>
+        <a href="#">Login </a>
+        <a href="#">Merchandise and Souveniers</a> -->
+    </nav>
+    {% block body %}{% endblock body %}
+    <section>
+        <h2>Welcome to Your Website!</h2>
+        <p>This is the main content of your website.</p>
+        <h1>Welcome to the world of GSS</h1>
+    <p>Welcome to Gryffindor Sky sCYTHE
+
+      Experience the thrilling world of Quidditch as you immerse yourself in the excitement of the famous wizarding sport. Gryffindor Super King is your ultimate destination for all things Quidditch, featuring team rosters, match schedules, and interactive elements that bring the magic of the game to life.
+      
+      Explore the rich history of Gryffindor's Quidditch legacy, with detailed match data from previous epic encounters. Relive the excitement, drama, and unforgettable moments that have made Gryffindor Super King a force to be reckoned with.
+      
+      Buy your tickets now and witness the fierce competition firsthand. Our ticket selling portal ensures a seamless experience, allowing you to secure your spot in the stands and cheer on your favorite team.
+      
+      For administrators, we offer powerful tools to manage the Quidditch matches. Add, create, or delete matches and their associated data with ease. Stay in control as you monitor registrations and modify user information, giving you the power to add, delete, or change the status of users. Our authentication system ensures secure access and privacy for administrators.
+      
+      To enhance your experience even further, we're constantly exploring opportunities for API integrations and additional features. Stay tuned for updates as we continue to expand Gryffindor Super King.
+      
+      Join us on this magical journey into the world of Quidditch and witness the triumphs and challenges that await. Are you ready to embrace the spirit of Gryffindor Super King?
+      </p>
+    </section>
+    <footer>
+        <div class="footer-container">  
+            <p class="belowname">© GSS. All Rights Reserved</p>
+            <a href="Terms_C.html" >Terms and Conditions</a>   
+            <a href="Contact.html" >Contact</a>  
+            <a href="PriPo.html" >Privacy Policy</a>  
+            <a href="Disclaimer.html" >Disclaimer</a>  
+          </div>
+        <div class="social-media">
+          <a href="">
+            <img src="static/twitter.jpeg" alt="Icon" />
+          </a>
+        <a href="">
+            <img src="static/instagram.jpeg" alt="Icon" />
+         </a>
+        <a href="">
+            <img src="static/youtube.jpeg" alt="Icon" />
+          </a>
+    
+        </div>
+        <!-- <p>&copy; 2023 Your Website. All rights reserved.</p> -->
+    </footer>
+</body>
+</html> {% endcomment %}

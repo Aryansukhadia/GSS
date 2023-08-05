@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Roster</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+  <style>
+    html {
+        font-family: 'Cinzel Decorative', cursive;
+        margin: 0 px;
+    }
+    body {
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      text-align: center;
+      background-color: #3e2358;
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      transition: background-color 1s;
+      /* position: fixed; */
+    }
+    #heading {
+      width: 100%;
+      margin: 0px;
+      padding: 30px;
+      box-sizing: border-box;
+      color: white;
+      align-self: center;
+      transition: background-color 1s;
+
+    }
+
+    .nav:hover {
+      background-color: #10141B;
+    }
+
+    #heading:hover {
+      background-color: #242533;
+    }
+    .mid{
+        margin-left: 35px;
+    }
+    .last{
+        display: flex;
+        flex-direction: column;
+    }
+    img{
+        position: relative;
+        width: 400px;
+    }
+    a{
+        position: relative;
+        bottom: 58px;
+
+    }
+    p{
+        position: absolute;
+        color: white;
+        /* background-color: rgba(0, 0, 0, 0.5); */
+        padding: 10px;
+        text-decoration: none;
+        z-index: 1;
+    }
+    .last::after{
+    content:  "";
+    position: relative;
+    bottom: 42px;
+    width: 400px;
+    height: 42px;
+    /* background: linear-gradient(to bottom, #ffffff53, #0099ccd2); */
+    background: linear-gradient(to bottom, #ffffff53, #0099cc);
+    /* background: linear-gradient(to bottom, #ffffff53, #1d4dc6d2); */
+    }
+    /* .sideway{
+        margin-left: 35px;
+        display: flex;
+        flex-direction: row;
+
+    } */
+
+  </style>
+</head>
+<body>
+    <nav class="nav">
+        <h1 id="heading">The Gryffindor Sky Scythes</h1>
+    </nav>
+    <section>
+        <div class="mid">
+            <h1>Captain</h1>
+            <h2>Oliver Wood</h2>
+            <div class="last">
+                <img src="static/Oliver.jpeg" alt="Oliver Wood" >
+                <a href="index.html" >
+                    <p>Oliver Wood</p>
+                </a>
+                </div>
+                Oliver Wood is the captain of the Gryffindor Quidditch team. He is a passionate and dedicated player who is always looking for ways to improve his team's performance. Wood is a bit of a perfectionist and can be quite demanding of his teammates, but he is also a loyal and supportive friend.
+                
+        </div>
+        <div class="mid">
+            <h1>Seekers</h1>
+            <h2>Harry Potter</h2>
+            <div class="last">
+                <img src="static/Harry.jpeg" alt="Harry Potter" >
+                <a href="index.html" >
+                    <p>Harry Potter </p>
+                </a>
+                </div>
+                Harry Potter is the youngest Seeker on the Gryffindor Quidditch team. He is a natural talent and has a knack for finding the Snitch. Harry is also a brave and determined player who is always willing to put his life on the line for his team.
+                
+        </div>
+        <div class="mid">
+            <h1>Keepers</h1>
+            <h2>Ron Weasley</h2>
+            <div class="last">
+                <img src="static/Ron.jpeg" alt="Ron Weasley" >
+                <a href="index.html" >
+                    <p>Ron Weasley </p>
+                </a>
+                </div>
+                Ron Weasley is the Keeper on the Gryffindor Quidditch team. He is a loyal and supportive friend who is always there for his teammates. Ron is not the most talented player, but he is always willing to give his all.
+        </div>
+        <div class="mid">
+            <h1>Chasers</h1>
+            <h2>Fred & George Weasley</h2>
+            <div class="last">
+                <img height="250px" src="static/Fred&George.jpeg" alt="Fred and George Weasley" >
+                <a href="index.html" >
+                    <p>Fred & George Weasley</p>
+                </a>
+        </div>
+        Fred and George Weasley are the twin Chasers on the Gryffindor Quidditch team. They are mischievous and prank-loving brothers who are always looking for a laugh. Fred and George are also skilled Quidditch players who are always willing to take risks.
+              
+        </div>
+        <div class="mid">
+            <h1>Beaters</h1>
+            <h2>Katie Bell</h2>
+            <div class="last">
+                <img height="250px" src="static/KatieBell.jpeg" alt="Katie Bell" >
+                <a href="index.html" >
+                    <p>Katie Bell</p>
+                </a>
+        </div>
+        Katie Bell is a Chaser on the Gryffindor Quidditch team. She is a skilled and accurate player who is always looking to score goals. Katie is also a brave and courageous player who is not afraid to put herself in danger.
+              
+        </div>
+
+    </section>
+</body>
+</html>
