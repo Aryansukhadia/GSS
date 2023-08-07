@@ -141,37 +141,12 @@
         .belowname:hover {
             color: white;
             text-decoration: none;
-
         }
     </style>
 
 </head>
 
 <body>
-    {% comment %} <ul id="matches-list">
-        <!-- Upcoming match items will be added here -->
-    </ul>
-
-    <script>
-        fetch('/api/upcoming-matches/')
-            .then(response => response.json())
-            .then(data => {
-                const matchesList = document.getElementById('matches-list');
-                data.upcoming_matches.forEach(match => {
-                    const listItem = document.createElement('li');
-                    listItem.innerHTML = `
-                        <strong>${match.title}</strong><br>
-                        Date: ${match.date}<br>
-                        Description: ${match.description}
-                    `;
-                    matchesList.appendChild(listItem);
-                });
-            })
-            .catch(error => console.error('Error fetching data:', error));
-    </script> {% endcomment %}
-    <!-- <header>
-        <h1>Upcoming Matches</h1>
-    </header> -->
     <nav>
         <a class="left" href="index.html">Home</a>
         <h2 class="upcom" href="#">Upcoming Matches</h2>
@@ -189,43 +164,7 @@
             <a href="booktick.html"><button class="book-button">Book Tickets</button></a>
         </div>
         {%endfor%}
-        {% comment %} <div class="match-card">
-            <div>
-                <h3>Match 2</h3>
-                <p>Date: September 8, 2023</p>
-                <p>Location: Stadium A</p>
-            </div>
-            <div>Gryffindor Sky Scythe v/s avenclaw Eagles</div>
-            <button class="book-button">Book Tickets</button>
-        </div>
-        <div class="match-card">
-            <div>
-                <h3>Match 3</h3>
-                <p>Date: September 15, 2023</p>
-                <p>Location: Stadium A</p>
-            </div>
-            <div>Gryffindor Sky Scythe v/s Slytherin Snakes</div>
-            <button class="book-button">Book Tickets</button>
-        </div>
-        <div class="match-card">
-            <div>
-                <h3>Match 4</h3>
-                <p>Date: September 22, 2023</p>
-                <p>Location: Stadium A</p>
-            </div>
-            <div>Gryffindor Sky Scythe v/s Durmstrang Dragons</div>
-            <button class="book-button">Book Tickets</button>
-        </div>
-        <div class="match-card">
-            <div>
-                <h3>Match 5</h3>
-                <p>Date: September 27, 2023</p>
-                <p>Location: Stadium B</p>
-            </div>
-            <div>Gryffindor Sky Scythe v/s Beauxbatons Tornados</div>
-            <button class="book-button">Book Tickets</button>
-        </div> {% endcomment %}
-        <!-- Add more match cards here -->
+    
     </section>
     <footer>
 

@@ -38,10 +38,11 @@ def buy(request):
          username =  request.POST.get('username')
          email = request.POST.get('email')
          address = request.POST.get('address')
-         match = request.POST.get('match')
+         match = request.POST.get('item')
          quantity = request.POST.get('quantity')
         #  password =  request.POST.get('password')
          merchandise = Merchandise(username=username, email=email, address=address, match=match, quantity=quantity, date = datetime.today())
+         print(merchandise.match)
          merchandise.save()
     return render(request, 'buy.html')
 

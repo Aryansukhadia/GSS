@@ -59,7 +59,7 @@ class Ticket(models.Model):
 class Merchandise(models.Model):
     username = models.CharField(max_length=122)
     email = models.EmailField(max_length=122)
-    match = models.IntegerField(null=True, blank=True)
+    match = models.IntegerField()
     quantity = models.IntegerField()
     address = models.TextField()
     date = models.DateField()
